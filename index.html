@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Próximos Feriados Argentina</title>
-  <style>
-    body {
-      background-color: black;
-      color: #00ff00;
-      font-family: monospace;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    #terminal {
-      width: 90%;
-      max-width: 800px;
-      height: 500px;
-      border: 2px solid #00ff00;
-      padding: 10px;
-      overflow-y: auto;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Próximos Feriados en Argentina</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: monospace;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #terminal {
+            width: 90%;
+            max-width: 700px;
+            height: 400px;
+            background-color: #001a00;
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            padding: 10px;
+            overflow-y: auto;
+            box-shadow: 0 0 20px #00ff00;
+        }
+    </style>
 </head>
 <body>
-  <div id="terminal"></div>
+    <div id="terminal"></div>
 
-  <!-- Importamos el paquete Terminal desde un CDN -->
- <script type="module">
-  import { Terminal } from "https://cdn.jsdelivr.net/npm/@es-js/terminal@1.1.10/dist/terminal.min.js";
-  window.Terminal = Terminal;
-</script>
+    <!-- Cargamos la librería Terminal sin módulos -->
+    <script src="https://cdn.jsdelivr.net/npm/@es-js/terminal@1.1.10/dist/terminal.min.js"></script>
 
-<script type="module" src="./script.js"></script>
-
+    <!-- Cargamos nuestro script principal -->
+    <script src="./script.js"></script>
 </body>
 </html>
