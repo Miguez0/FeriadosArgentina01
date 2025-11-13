@@ -1,5 +1,5 @@
 // Usamos la Terminal expuesta globalmente
-const { Terminal } = window;
+const { Terminal } = window.esjs;
 
 // URLs externas
 const URL_JSON = 'https://api.argentinadatos.com/v1/feriados/';
@@ -7,7 +7,6 @@ const URL_VALIDAR_SECRETO = 'https://desarrollo-aplicaciones.vercel.app/2024/cod
 const URL_OBTENER_JSON = 'https://desarrollo-aplicaciones.vercel.app/2024/code/obtener-json.js';
 const URL_CALCULAR_PROXIMO = 'https://desarrollo-aplicaciones.vercel.app/2024/code/calcular-proximo-feriado.js';
 
-// Cargamos dinámicamente los módulos necesarios
 async function cargarModulo(url) {
     const mod = await import(url);
     return mod;
@@ -18,7 +17,7 @@ async function inicio() {
     Terminal.escribir("Hola! Ingresa la palabra secreta:");
 
     const secreto = await Terminal.leer();
-    const dni = "45723805"; // tu DNI
+    const dni = "45723805";
 
     const { validarSecreto } = await cargarModulo(URL_VALIDAR_SECRETO);
     const { obtenerJson } = await cargarModulo(URL_OBTENER_JSON);
